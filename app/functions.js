@@ -66,7 +66,7 @@ exports.getSvg = () => {
         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
         width="${width}" height="${height}" style="fill: #001;">
         <style>
-        .title { fill: #b0669a; font-family: Arial; font-size: ${fontSize}px; font-weight: bold; }
+        .title { fill: #b0669a; font-family:'Open Sans'; font-size: ${fontSize}px; font-weight: bold; }
         .group { transform:rotate(-15) translate(-85px,10px) skewX(10deg); }
         </style>
         <!--  test  
@@ -113,10 +113,14 @@ async function addTextOnImage() {
 			.tint(tints[Math.floor(Math.random() * tints.length)])
 			.png()
 			.toBuffer();
-		sharp(image).toFile(path.join(__dirname, "/hearts/svg-image.png"));
+		sharp(image)
+            .toFile(path.join(__dirname, "/hearts/svg-image.png"))
+            .catch(function(err) {
+                console.log("Error occured ", err);
+              });
 		return image;
 	} catch (error) {
-		console.log(error);
+		console.error('😥', error);
 	}
 }
 

@@ -27,11 +27,11 @@ router.get("/heart.svg", (req, res, next) => {
 router.get("/heart.png", async function (req, res, next) {
 	let img = await functions.addTextOnImage();
 	// res.sendFile(path.join(__dirname, "../app/hearts/svg-image.png"));
-  res.writeHead(200, {
+	res.writeHead(200, {
 		"Content-Type": "image/png",
 		"Content-Length": img.length,
 	});
-	console.log(img)
+	console.log(img);
 	res.end(img);
 });
 
