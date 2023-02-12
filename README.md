@@ -44,7 +44,22 @@ DEBUG=sample-api-candy-hearts:* nodemon start
 
 
 
-### 3. Track with Git
+### 3. Edit views
+
+1. Add Bootstrap to `views/layout.hbs` using their [quickstart](https://getbootstrap.com/docs/5.3/getting-started/introduction/#quick-start)
+1. Delete content inside `public/stylesheets/style.css`
+
+
+### 4. Create API
+
+1. Replace all occurances of the word "users" with "api" across the whole project (Command+Shift+F) including the filename of `routes/users.js`
+1. Open `routes/api.js` and replace line 6 `res.send(...)` with `res.json({ "message": "hello, world!" });` 
+1. Got to http://localhost:3000/api to test
+
+
+
+
+### 5. Track with Git
 
 [.gitignore](https://www.toptal.com/developers/gitignore/api/node,macos,windows)
 
@@ -58,18 +73,6 @@ git add .
 git commit -m "First commit"
 ```
 
-
-### 4. Edit views
-
-1. Add Bootstrap to `views/layout.hbs` using their [quickstart](https://getbootstrap.com/docs/5.3/getting-started/introduction/#quick-start)
-1. Delete content inside `public/stylesheets/style.css`
-
-
-### 5. Create API
-
-1. Replace all occurances of the word "users" with "api" across the whole project (Command+Shift+F) including the filename of `routes/users.js`
-1. Open `routes/api.js` and replace line 6 `res.send(...)` with `res.json({ "message": "hello, world!" });` 
-1. Got to http://localhost:3000/api to test
 
 
 ### 6. Publish
@@ -112,10 +115,11 @@ vercel logs ai-candy-hearts-api.vercel.app
 
 ## Next Steps
 
-At this point you have the basic API running on Vercel. See these files to finish implementing this particular functionality:
+At this point you have the basic API running on Vercel. See these files to finish implementing this API:
 
 - `routes/api.js`
 - `app/functions.js`
+- `app/words.js`
 
 
 ## References
