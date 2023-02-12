@@ -39,7 +39,7 @@ DEBUG=sample-api-candy-hearts:* nodemon start
 
 1. Move and rename `/bin/www.js` to `/server.js`
 1. Update paths in `server.js`, add `module.exports = server` to the end
-1. Update `package.json` to 
+1. Update `package.json` to reflect these changes 
 
 
 
