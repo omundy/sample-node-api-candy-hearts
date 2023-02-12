@@ -83,6 +83,19 @@ git commit -m "First commit"
 }
 ```
 
+### Debugging Vercel
+
+```bash
+# install Vercel CLI https://vercel.com/docs/cli
+npm i -g vercel
+# check version
+vercel --version
+# view logs (login as needed)
+vercel logs sample-api-candy-hearts.vercel.app
+```
+
+
+### Next Steps
 
 At this point you have the basic API running on Vercel. See these files to finish implementing this particular functionality:
 

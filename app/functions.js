@@ -1,6 +1,7 @@
 var exports = (module.exports = {});
 
 var words = require("./words.js");
+let path = require("path");
 
 exports.getPhrase = () => {
 	let verb = words.verbs[Math.floor(Math.random() * words.verbs.length)];
@@ -99,11 +100,10 @@ async function addTextOnImage() {
         // add the png and svg on top
 			.composite([
 				{
-					input: "./app/hearts/heart.png",
+					input: path.join(__dirname,"/hearts/heart.png"),
 					top: 0,
 					left: 0,
-				},
-				{
+				}, {
 					input: svgPng,
 					top: 0,
 					left: 0,
