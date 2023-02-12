@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('./app');
 var debug = require('debug')('sample-api-candy-hearts:server');
 var http = require('http');
 
@@ -30,8 +30,8 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 
-// Export the app for it to be run as a serverless function.
-module.exports = app
+// Export the server for it to be run as a serverless function.
+module.exports = server
 
 
 /**

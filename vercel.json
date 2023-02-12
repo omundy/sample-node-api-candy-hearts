@@ -2,11 +2,11 @@
 	"version": 2,
 	"name": "sample-api-candy-hearts",
 	"builds": [{
-		"src": "./bin/www",
+		"src": "./server.js",
 		"use": "@vercel/node"
 	}],
 	"routes": [{
 		"src": "/(.*)",
-		"dest": "/bin/www.js"
+		"dest": "/server.js"
 	}]
 }
