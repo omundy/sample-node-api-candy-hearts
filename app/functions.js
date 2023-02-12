@@ -110,8 +110,12 @@ async function addTextOnImage() {
 				},
 			])
             .tint(tints[Math.floor(Math.random()*tints.length)])
-			.toFile("./app/hearts/svg-image.png");
-		return true;
+          
+
+        .png()
+        .toBuffer()
+			// .toFile("./app/hearts/svg-image.png");
+		return image;
 	} catch (error) {
 		console.log(error);
 	}

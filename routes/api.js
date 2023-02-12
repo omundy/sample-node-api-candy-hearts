@@ -26,7 +26,12 @@ router.get("/heart.svg", (req, res, next) => {
 // heart png file
 router.get("/heart.png", async function (req, res, next) {
 	let img = await functions.addTextOnImage();
-	res.sendFile(path.join(__dirname, "../app/hearts/svg-image.png"));
+	// res.sendFile(path.join(__dirname, "../app/hearts/svg-image.png"));
+  res.writeHead(200, {
+		"Content-Type": "image/png",
+		// "Content-Length": img.length,
+	});
+	res.end(img, 'binary');
 });
 
 module.exports = router;

@@ -22,8 +22,13 @@ DEBUG=sample-api-candy-hearts:* nodemon start
 ```
 
 
+### 2. Modify structure
 
-### 2. Track with Git
+1. Move and rename `/bin/www.js` to `/server.js`
+1. Add `module.exports = server` to the end of `server.js`
+1. Update `package.json` to 
+
+### 3. Track with Git
 
 [.gitignore](https://www.toptal.com/developers/gitignore/api/node,macos,windows)
 
@@ -38,23 +43,39 @@ git commit -m "First commit"
 ```
 
 
-### 3. Edit views
+### 4. Edit views
 
 1. Add Bootstrap to `views/layout.hbs` using their [quickstart](https://getbootstrap.com/docs/5.3/getting-started/introduction/#quick-start)
 1. Delete content inside `public/stylesheets/style.css`
 
 
-### 4. Create API
+### 5. Create API
 
 1. Replace all occurances of the word "users" with "api" across the whole project (Command+Shift+F) including the filename of `routes/users.js`
 1. Open `routes/api.js` and replace line 6 `res.send(...)` with `res.json({ "message": "hello, world!" });` 
 1. Got to http://localhost:3000/api to test
 
 
-### 5. Publish
+### 6. Publish
 
+1. Add a `vercel.json` file with the contents below
 1. Commit and push all your changes to Github
 1. Create vercel.com account (using Github)
 1. Add Project
 1. Import your repository
 1. Click Deploy
+
+```json
+{
+	"version": 2,
+	"name": "sample-api-candy-hearts",
+	"builds": [{
+		"src": "./server.js",
+		"use": "@vercel/node"
+	}],
+	"routes": [{
+		"src": "/(.*)",
+		"dest": "/server.js"
+	}]
+}
+```

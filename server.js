@@ -30,7 +30,7 @@ server.on('error', onError);
 server.on('listening', onListening);
 
 
-// Export the server for it to be run as a serverless function.
+// Export the server for it to be run as a serverless function (vercel)
 module.exports = server
 
 
