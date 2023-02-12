@@ -1,7 +1,7 @@
 
 # AI Candy Heart Generator
 
-<img src="public/assets/img/heart-3.png" width="100px"> <img src="public/assets/img/heart-1.png" width="100px"> <img src="public/assets/img/heart-4.png" width="100px"> <img src="public/assets/img/heart-2.png" width="100px"> <img src="public/assets/img/heart-5.png" width="100px"> <img src="public/assets/img/heart-11.png" width="100px"> <img src="public/assets/img/heart-8.png" width="100px"> <img src="public/assets/img/heart-6.png" width="100px"> <img src="public/assets/img/heart-7.png" width="100px"> <img src="public/assets/img/heart-15.png" width="100px">
+<img src="public/assets/img/heart-3.png" width="100px"> <img src="public/assets/img/heart-1.png" width="100px"> <img src="public/assets/img/heart-4.png" width="100px"> <img src="public/assets/img/heart-2.png" width="100px"> <img src="public/assets/img/heart-5.png" width="100px"> <img src="public/assets/img/heart-11.png" width="100px"> <img src="public/assets/img/heart-8.png" width="100px"> <img src="public/assets/img/heart-6.png" width="100px"> 
 
 
 ## Tutorial
