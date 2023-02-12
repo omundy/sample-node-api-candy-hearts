@@ -114,7 +114,7 @@ async function addTextOnImage() {
 
         .png()
         .toBuffer()
-			// .toFile("./app/hearts/svg-image.png");
+			sharp(image).toFile("./app/hearts/svg-image.png");
 		return image;
 	} catch (error) {
 		console.log(error);

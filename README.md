@@ -25,8 +25,11 @@ DEBUG=sample-api-candy-hearts:* nodemon start
 ### 2. Modify structure
 
 1. Move and rename `/bin/www.js` to `/server.js`
-1. Add `module.exports = server` to the end of `server.js`
+1. Update paths in `server.js`, add `module.exports = server` to the end
 1. Update `package.json` to 
+
+
+
 
 ### 3. Track with Git
 
@@ -79,3 +82,9 @@ git commit -m "First commit"
 	}]
 }
 ```
+
+
+At this point you have the basic API running on Vercel. See these files to finish implementing this particular functionality:
+
+- `routes/api.js`
+- `app/functions.js`
