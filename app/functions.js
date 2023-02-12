@@ -113,11 +113,16 @@ async function addTextOnImage() {
 			.tint(tints[Math.floor(Math.random() * tints.length)])
 			.png()
 			.toBuffer();
-		sharp(image)
-            .toFile(path.join(__dirname, "/hearts/svg-image.png"));
+
+		// Previous code: Need to use external storage service 
+        // It is not possible to write files using a vercel server (or serverless generally). 
+		// sharp(image)
+		//     .toFile(path.join(__dirname, "/hearts/svg-image.png"))
+		//     .catch((error) => console.log("Error occured", error));
+
 		return image;
 	} catch (error) {
-		console.error('😥', error);
+		console.error("😥", error);
 	}
 }
 

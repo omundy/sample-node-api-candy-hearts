@@ -23,15 +23,18 @@ router.get("/heart.svg", (req, res, next) => {
 	res.end(svg);
 });
 
-// heart png file
+// production > return actual png file 
 router.get("/heart.png", async function (req, res, next) {
 	let img = await functions.addTextOnImage();
+
+	// previously wrote to disk and sent file. Not possible on Vercel
 	// res.sendFile(path.join(__dirname, "../app/hearts/svg-image.png"));
+
 	res.writeHead(200, {
 		"Content-Type": "image/png",
 		"Content-Length": img.length,
 	});
-	console.log(img);
+	// console.log(img);
 	res.end(img);
 });
 
