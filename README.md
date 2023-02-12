@@ -101,3 +101,9 @@ At this point you have the basic API running on Vercel. See these files to finis
 
 - `routes/api.js`
 - `app/functions.js`
+
+
+
+## References
+
+- [How to create and deploy an Express.js app to Vercel](https://syntackle.live/blog/how-to-create-and-deploy-an-express-js-app-to-vercel-ljgvGrsCH7ioHsAxuw3G/) May 2022

@@ -31,7 +31,7 @@ exports.getSvg = () => {
 	let words = phrase.split(" ");
 	// default
 	let svgStr = "";
-    let fontSize = 58;
+	let fontSize = 58;
 	if (words.length == 1) {
 		svgStr = `<text x="50%" y="50%" text-anchor="middle" class="title">${words[0]}</text>`;
 	} else if (words.length == 2) {
@@ -58,7 +58,7 @@ exports.getSvg = () => {
         <text x="50%" y="67%" text-anchor="middle" class="title">${words[4]}</text>
         `;
 	}
-    console.log(words)
+	console.log(words);
 
 	return `
     <svg 
@@ -88,33 +88,32 @@ async function addTextOnImage() {
 		const svgBuffer = Buffer.from(svgImage);
 		const svgPng = await sharp(svgBuffer).png().toBuffer();
 		const image = await sharp({
-            // create the background
+			// create the background
 			create: {
 				width: width,
 				height: height,
 				channels: 4,
-                background: { r: 255, g: 0, b: 0, alpha: 0 },
+				background: { r: 255, g: 0, b: 0, alpha: 0 },
 				// background: { r: 255, g: 0, b: 0, alpha: 0.7 }, // test
 			},
 		})
-        // add the png and svg on top
+			// add the png and svg on top
 			.composite([
 				{
-					input: path.join(__dirname,"/hearts/heart.png"),
+					input: path.join(__dirname, "/hearts/heart.png"),
 					top: 0,
 					left: 0,
-				}, {
+				},
+				{
 					input: svgPng,
 					top: 0,
 					left: 0,
 				},
 			])
-            .tint(tints[Math.floor(Math.random()*tints.length)])
-          
-
-        .png()
-        .toBuffer()
-			sharp(image).toFile("./app/hearts/svg-image.png");
+			.tint(tints[Math.floor(Math.random() * tints.length)])
+			.png()
+			.toBuffer();
+		sharp(image).toFile(path.join(__dirname, "/hearts/svg-image.png"));
 		return image;
 	} catch (error) {
 		console.log(error);
@@ -122,12 +121,12 @@ async function addTextOnImage() {
 }
 
 const tints = [
-    { r: 210, g: 162, b: 208 }, // purple
-    { r: 255, g: 158, b: 11 }, // orange
-    { r: 98, g: 204, b: 220 }, // blue
-    { r: 251, g: 213, b: 0 }, // yellow
-    { r: 95, g: 200, b: 101 }, // green
-    { r: 255, g: 199, b: 206 }, // pink
-]
+	{ r: 210, g: 162, b: 208 }, // purple
+	{ r: 255, g: 158, b: 11 }, // orange
+	{ r: 98, g: 204, b: 220 }, // blue
+	{ r: 251, g: 213, b: 0 }, // yellow
+	{ r: 95, g: 200, b: 101 }, // green
+	{ r: 255, g: 199, b: 206 }, // pink
+];
 
 exports.addTextOnImage = addTextOnImage;
