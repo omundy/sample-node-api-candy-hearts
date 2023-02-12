@@ -62,3 +62,8 @@ git commit -m "First commit"
 
 ### 5. Publish
 
+1. Commit and push all your changes to Github
+1. Create vercel.com account (using Github)
+1. Add Project
+1. Import your repository
+1. Click Deploy
