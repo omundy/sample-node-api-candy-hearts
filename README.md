@@ -4,7 +4,20 @@
 <img src="public/assets/img/heart-3.png" width="100px"> <img src="public/assets/img/heart-1.png" width="100px"> <img src="public/assets/img/heart-4.png" width="100px"> <img src="public/assets/img/heart-2.png" width="100px"> <img src="public/assets/img/heart-5.png" width="100px"> <img src="public/assets/img/heart-11.png" width="100px"> <img src="public/assets/img/heart-8.png" width="100px"> <img src="public/assets/img/heart-6.png" width="100px"> 
 
 
-## Tutorial
+Running on Vercel @ https://ai-candy-hearts-api.vercel.app/
+
+Endpoints 
+- Home http://localhost:3000/ 
+- Text http://localhost:3000/api/random
+- SVG http://localhost:3000/api/heart.svg
+- PNG http://localhost:3000/api/heart.png
+
+
+
+
+## Tutorial*
+
+*From scratch, or just clone the repo
 
 ### 1. Generate project
 
@@ -85,17 +98,19 @@ git commit -m "First commit"
 
 ### Debugging Vercel
 
+Use the [Vercel CLI](https://vercel.com/docs/cli) to view [logs](https://vercel.com/docs/cli/logs) or [inspect](https://vercel.com/docs/cli/inspect) your app
+
 ```bash
-# install Vercel CLI https://vercel.com/docs/cli
+# install Vercel CLI 
 npm i -g vercel
 # check version
 vercel --version
 # view logs (login as needed)
-vercel logs sample-api-candy-hearts.vercel.app
+vercel logs ai-candy-hearts-api.vercel.app
 ```
 
 
-### Next Steps
+## Next Steps
 
 At this point you have the basic API running on Vercel. See these files to finish implementing this particular functionality:
 
@@ -103,7 +118,7 @@ At this point you have the basic API running on Vercel. See these files to finis
 - `app/functions.js`
 
 
-
 ## References
 
 - [How to create and deploy an Express.js app to Vercel](https://syntackle.live/blog/how-to-create-and-deploy-an-express-js-app-to-vercel-ljgvGrsCH7ioHsAxuw3G/) May 2022
+- [How To Process Images in Node.js with Sharp](https://www.digitalocean.com/community/tutorials/how-to-process-images-in-node-js-with-sharp) September 2021

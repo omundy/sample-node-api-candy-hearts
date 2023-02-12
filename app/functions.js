@@ -66,7 +66,7 @@ exports.getSvg = () => {
         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
         width="${width}" height="${height}" style="fill: #001;">
         <style>
-        .title { fill: #b0669a; font-family:'Open Sans'; font-size: ${fontSize}px; font-weight: bold; }
+        .title { fill: #b0669a; font-family:'Roboto Slab','Open Sans'; font-size: ${fontSize}px; font-weight: bold; }
         .group { transform:rotate(-15) translate(-85px,10px) skewX(10deg); }
         </style>
         <!--  test  
