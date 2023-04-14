@@ -47,7 +47,7 @@ DEBUG=sample-api-candy-hearts:* nodemon start
 
 
 
-### 3. Edit views
+### 3. Add Bootstrap to views
 
 1. Add Bootstrap to `views/layout.hbs` using their [quickstart](https://getbootstrap.com/docs/5.3/getting-started/introduction/#quick-start)
 1. Delete content inside `public/stylesheets/style.css`
@@ -67,10 +67,10 @@ DEBUG=sample-api-candy-hearts:* nodemon start
 [.gitignore](https://www.toptal.com/developers/gitignore/api/node,macos,windows)
 
 ```bash
-# make a git repo
-git init
 # add .gitignore, paste from link above
 touch .gitignore
+# make a git repo
+git init
 # first commit
 git add .
 git commit -m "First commit"
