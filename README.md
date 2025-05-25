@@ -33,7 +33,9 @@ cd sample-api-candy-hearts
 code .
 # install modules
 npm install
-# run the app
+# install nodemon / start app 
+npx nodemon
+# or run the app (if nodemon is installed) with debugging on
 DEBUG=sample-api-candy-hearts:* nodemon start
 ```
 
