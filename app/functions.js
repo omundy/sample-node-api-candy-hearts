@@ -7,13 +7,14 @@ exports.getPhrase = () => {
 	let verb = words.verbs[Math.floor(Math.random() * words.verbs.length)];
 	let noun = words.nouns[Math.floor(Math.random() * words.nouns.length)];
 	let phrases = [
-		`${capitalizeFirstLetter(verb)} me`, // 2
+		`${capitalizeFirstLetter(verb)} me`, // 2 words
 		`Let's ${verb}`,
 		`Nice ${noun}`,
 		`Cute ${noun}`,
 		`You ${verb} me`, // 3
 		`I like your ${noun}`, // 4
 		`I want to ${verb} you`, // 5
+		`I want you to ${verb} me`, // 6
 	];
 	let r = Math.floor(Math.random() * phrases.length);
 	console.log(phrases);
@@ -56,6 +57,12 @@ exports.getSvg = () => {
         <text x="50%" y="37%" text-anchor="middle" class="title">${words[0]} ${words[1]} ${words[2]}</text>
         <text x="50%" y="52%" text-anchor="middle" class="title">${words[3]}</text>
         <text x="50%" y="67%" text-anchor="middle" class="title">${words[4]}</text>
+        `;
+	} else if (words.length == 6) {
+		svgStr = `
+        <text x="50%" y="37%" text-anchor="middle" class="title">${words[0]} ${words[1]} ${words[2]} ${words[3]}</text>
+        <text x="50%" y="52%" text-anchor="middle" class="title">${words[4]}</text>
+        <text x="50%" y="67%" text-anchor="middle" class="title">${words[5]}</text>
         `;
 	}
 	console.log(words);
